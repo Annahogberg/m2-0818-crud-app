@@ -1,0 +1,11 @@
+<div style="padding:10px; border:1px solid red;">
+  <a href="/libreria/new">Crear un libro nuevo</a>
+</div>
+{{#each books}}
+  <p>
+    <a href="/libreria/{{this._id}}">{{this.title}}</a>
+    - 
+    <a href="/libreria/update/{{this._id}}">Edit</a>
+    <a href="/libreria/delete/{{this._id}}">Delete</a>
+  </p>
+{{/each}}

@@ -1,0 +1,17 @@
+
+<h1>{{book.title}} - {{book.author}}</h1>
+<p>{{book.description}}</p>
+
+<h2>Las opiniones de este libro</h2>
+{{#each opinions}}
+  <p>{{this.texto}}</p>
+{{/each}}
+
+<form action="/opinions/new/{{book._id}}?redirect=/libreria/{{book._id}}" method="post">
+  <label for="">Opinion:</label>
+  <input type="text" name="texto">
+  <button type="submit">Enviar</button>
+</form>
+
+
+<a href="/libreria">Back to list</a>
